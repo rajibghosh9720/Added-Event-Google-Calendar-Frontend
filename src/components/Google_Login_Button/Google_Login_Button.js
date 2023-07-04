@@ -22,7 +22,7 @@ const Google_Login_Button = ({ onLoginSuccess }) => {
     console.log(response);
     const { code } = response;
     await axios
-      .post("http://localhost:4000/api/create-tokens", { code })
+      .post("https://google-calendar-backend.onrender.com/api/create-tokens", { code })
       .then((response) => {
         console.log(response.data);
         onLoginSuccess();
